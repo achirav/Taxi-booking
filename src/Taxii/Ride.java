@@ -17,6 +17,4 @@ public class Ride {
         destination=dest.next();
     }
 
-
-
 }
