@@ -1,9 +1,12 @@
 package Taxii;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Customer {
-    String Cname,Cage;
+    String Cname;
+    int age,x,otp;
+    long phone;
 
     Scanner input=new Scanner(System.in);
 
@@ -11,17 +14,42 @@ public class Customer {
         System.out.print("Enter your name: ");
         Cname=input.next();
 
+        System.out.print("Enter your phone number: ");
+        phone= input.nextLong();
+
         System.out.print("Enter your age: ");
-        Cage=input.next();
+        age=input.nextInt();
 
         return Cname;
     }
 
     public void display(String Cname){
 
-        System.out.println("***********************");
-        System.out.println("Welcome to Taxi service");
-        System.out.println("***********************");
-        System.out.println("\nWelcome "+Cname);
+        if (age>18){
+            System.out.println("Eligible for app");
+            System.out.println("\nWelcome "+Cname);
+
+            Random random=new Random();
+            x= random.nextInt(9999);
+            System.out.print("your OTP is : "+x);
+
+            while (true){
+                System.out.print("\nEnter your OTP to access: ");
+                otp= input.nextInt();
+
+                if (x==otp){
+                    System.out.println("You have access!!");
+                    break;
+                }else {
+                    System.out.println("Wrong OTP, Enter again: ");
+                    otp= input.nextInt();
+                    continue;
+                }
+            }
+
+        } else {
+            System.out.println("Access denied ");
+        }
+
     }
 }
