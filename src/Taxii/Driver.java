@@ -3,18 +3,24 @@ package Taxii;
 import java.util.Random;
 
 public class Driver {
-    int name;
+    int name,pin;
 
     String [] riders={"Sanath","Santha","lakmal","Sarath"};
 
     Random rand=new Random();
 
-    public String driver(){
+    public void driver(){
 
         name=rand.nextInt(riders.length);
 
-        System.out.println("Your driver is "+riders[name]);
+        System.out.println("\nYour driver is "+riders[name]);
 
-        return riders[name];
+    }
+
+    public int pin_detail(){
+        pin=rand.nextInt(9999);
+        System.out.print("\nYour pin is "+pin);
+
+        return pin;
     }
 }
