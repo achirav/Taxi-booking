@@ -7,9 +7,9 @@ public class Ride {
 
     Scanner dest=new Scanner(System.in);
 
-    public void pickup_meth(){
-        System.out.print("Set your pickup location: "); //take details of pickup loaction
-        pickup=dest.next();
+    public void pickup_meth() {
+        System.out.print("\nSet your pickup location: "); //take details of pickup loaction
+        pickup = dest.next();
     }
 
     public void drop_meth(){
