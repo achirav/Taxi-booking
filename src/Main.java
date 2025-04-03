@@ -33,6 +33,7 @@ public class Main {
         if (answr.equalsIgnoreCase("y")) {
             System.out.print("Choose vehicle for ride: ");
             vehciletype=inpt.next();
+            customerDetail.payment();
             ride.pickup_meth();
             ride.drop_meth();
         } else {
