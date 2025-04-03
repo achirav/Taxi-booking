@@ -23,6 +23,13 @@ public class Customer {
         return Cname;
     }
 
+    public void payment(){
+        String pay;
+        System.out.print("Cash or Card?");
+        pay=input.next();
+        System.out.print("Payment: "+pay);
+    }
+
     public void display(String Cname) {
 
         if (age > 18) {
